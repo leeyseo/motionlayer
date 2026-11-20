@@ -2,6 +2,10 @@
   "hosting": [
     { "target": "state", "public": "fenno-preview" },
     { "target": "index", "public": "fenno-index" },
-    { "target": "lookbook", "public": "fenno-highlight" }
+    { "target": "lookbook", "public": "fenno-highlight" },
+    { "target": "motionlayer-saga", "public": "motionlayer-saga/dist" },
+    { "target": "motionlayer-womenswear", "public": "motionlayer-womenswear/dist" },
+    { "target": "motionlayer-cascade", "public": "motionlayer-cascade/dist" },
+    { "target": "motionlayer-index", "public": "motionlayer-index/dist" }
   ]
 }

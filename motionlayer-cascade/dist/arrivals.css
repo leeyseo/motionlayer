@@ -1,0 +1,29 @@
+.arrivals-section{--arrival-spacing:238px;--arrival-gutter:80px;position:relative;isolation:isolate;padding:80px 40px;font-family:'Cascade Inter','Noto Sans KR',sans-serif}
+.arrivals-canvas{position:relative;max-width:1720px;margin-inline:auto}
+.arrivals-title-layer{position:absolute;inset:0;z-index:5;pointer-events:none}
+.arrivals-sticky-title{position:sticky;top:0;height:100vh;max-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+.arrivals-sticky-title h2{font-family:'Cascade Inter','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(64px,6.73vw,120px);letter-spacing:-.05em;line-height:1;text-align:center;white-space:nowrap}
+.arrival-card{position:absolute;min-width:0}
+.arrival-photo{display:block;position:relative;width:100%;overflow:hidden;isolation:isolate;background:#f4f5f5}
+.arrival-photo>img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover}
+.arrival-photo>.arrival-secondary{position:absolute;inset:0;height:100%;opacity:0;transform:none;transition:opacity 200ms var(--standard)}
+.arrival-caption{margin-top:20px;font-size:16px;line-height:1.4;letter-spacing:0}
+.arrival-name{font-size:inherit;line-height:inherit;font-weight:400;text-align:left}
+.arrival-caption>p{margin:0;font-size:inherit;line-height:inherit}
+/* The second photograph fades above the reveal layer; it never zooms in. */
+.motion-ready [data-scale-reveal]>.arrival-secondary,.is-revealed [data-scale-reveal]>.arrival-secondary,.reveal-complete [data-scale-reveal]>.arrival-secondary{transform:none;transition:opacity 200ms var(--standard)}
+@media(hover:hover) and (pointer:fine){.arrival-card.reveal-complete .arrival-photo:hover>.arrival-secondary{opacity:1}}
+@media(min-width:768px) and (max-width:1100px){.arrivals-section{--arrival-gutter:40px;padding-inline:25px}}
+@media(max-width:767px){
+  .arrivals-section{--arrival-spacing:154px;--arrival-gutter:0px;padding:40px 20px}
+  .arrivals-sticky-title{height:100svh;max-height:100svh;padding:20px}
+  .arrivals-sticky-title h2{font-size:24px;letter-spacing:-.05em;line-height:1.4}
+  .arrival-card{--reveal-delay:0ms!important}
+  .arrival-caption{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  .arrivals-title-layer{position:relative;margin-bottom:50px}
+  .arrivals-sticky-title{position:relative;height:auto;max-height:none;padding:0}
+  .arrivals-sticky-title h2{white-space:normal}
+  .arrival-photo>.arrival-secondary{opacity:0!important}
+}

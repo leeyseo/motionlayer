@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="모션레이어. 당신의 일상과 움직임 사이, 가장 편안한 레이어." name="description"/>
+<title>MOTION LAYER — 모션레이어</title>
+<link href="assets/mark.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="app.js" type="module"></script>
+<link href="interactions.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#collection">상품 목록으로 건너뛰기</a>
+<header class="site-header">
+<a aria-label="모션레이어 홈" class="brand" href="#">
+<img alt="" class="brand-mark" height="39" src="assets/mark.svg" width="39"/>
+<span>MOTION<br/>LAYER</span>
+</a>
+<nav aria-label="주 메뉴" class="primary-nav">
+<a class="current" href="#collection">Shop</a>
+<a href="#series">Series</a>
+<button data-open-info="about" type="button">About</button>
+<a href="#brand-film">Film</a></nav>
+<nav aria-label="쇼핑 메뉴" class="utility-nav">
+<button aria-controls="state-panel" aria-expanded="false" class="state-trigger" id="state-trigger" type="button"><span aria-hidden="true" class="state-orbit"></span><span>오늘의 상태</span></button>
+<button class="search-trigger" id="search-trigger" type="button">Search</button>
+<button aria-label="장바구니 0개" id="cart-trigger" type="button">Bag <span class="cart-count">(0)</span></button>
+<button aria-controls="mobile-menu" aria-expanded="false" class="mobile-menu-trigger" id="mobile-menu-trigger" type="button">Menu</button>
+</nav>
+</header>
+<dialog aria-label="모바일 메뉴" class="mobile-menu" hidden="" id="mobile-menu"><div class="menu-sheet-header"><span>MOTION LAYER</span><button aria-label="메뉴 닫기" data-close="mobile-menu" type="button">Close ×</button></div><nav aria-label="모바일 메뉴" class="menu-sheet-links">
+<a href="#collection">Shop</a><a href="#brand-film">Film</a><a href="#series">Series</a><button data-open-info="about" type="button">About</button><button data-open-info="guide" type="button">Guide</button><button id="mobile-state-trigger" type="button">오늘의 상태</button>
+</nav></dialog>
+<main id="main-content">
+<section aria-labelledby="intro-title" class="intro page-width">
+<div class="intro-label mono"><span>LAYERS FOR EVERYDAY</span><span>COLLECTION — 01</span></div>
+<div class="intro-copy"><h1 id="intro-title">매일의 움직임에,<br/>당신다운 레이어.</h1><p>가볍게 나서는 아침부터 느긋하게 보내는 저녁까지.<br class="desktop-break"/> 모션레이어는 일상의 서로 다른 순간을 함께합니다.</p></div>
+</section>
+<section aria-labelledby="state-title" class="state-panel page-width" hidden="" id="state-panel">
+<div class="state-panel-inner"><div><span class="eyebrow mono">HOW ARE YOU TODAY?</span><h2 id="state-title">오늘은 어떤 하루인가요?</h2><p>지금의 기분에 맞는 레이어를 찾아보세요.</p></div><div class="state-options" id="state-options"><button data-mood="light" type="button"><span aria-hidden="true" class="mood-icon">◌</span>가볍게</button><button data-mood="focus" type="button"><span aria-hidden="true" class="mood-icon">⊙</span>집중해서</button><button data-mood="slow" type="button"><span aria-hidden="true" class="mood-icon">∽</span>느긋하게</button><button data-mood="outdoor" type="button"><span aria-hidden="true" class="mood-icon">✳</span>어디로든</button></div><button aria-label="오늘의 상태 닫기" class="state-close text-button" id="state-close" type="button">닫기</button></div>
+</section>
+<section aria-labelledby="collection-title" class="collection page-width" id="collection">
+<div class="collection-heading"><div class="collection-title-wrap"><h2 id="collection-title">The everyday collection</h2><span class="mono total-count" id="total-count">09</span></div><div aria-label="상품 보기 방식" class="view-switch" role="group"><button aria-pressed="true" id="grid-view" type="button">Grid</button><span aria-hidden="true">/</span><button aria-pressed="false" id="index-view" type="button">Index</button></div></div>
+<div class="collection-toolbar"><nav aria-label="아이템 필터" class="category-tabs" id="category-tabs"><button aria-pressed="true" data-category="all" type="button">All</button><button aria-pressed="false" data-category="tops" type="button">Tops</button><button aria-pressed="false" data-category="bottoms" type="button">Bottoms</button><button aria-pressed="false" data-category="accessories" type="button">Accessories</button></nav><div class="filter-actions"><div class="color-filter"><button aria-controls="color-options" aria-expanded="false" id="color-trigger" type="button">Color <span aria-hidden="true">+</span></button><div class="color-popover" hidden="" id="color-options"><span class="eyebrow">컬러 선택</span><div id="color-buttons"></div><button class="clear-color" id="clear-color" type="button">선택 해제</button></div></div><label class="sort-control"><span class="sr-only">상품 정렬</span><select id="sort-select"><option value="featured">추천순</option><option value="price-low">낮은 가격순</option><option value="price-high">높은 가격순</option><option value="name">이름순</option></select><span aria-hidden="true" class="select-chevron"></span></label></div></div>
+<div class="search-row" hidden="" id="search-row"><label for="product-search">찾고 있는 레이어가 있나요?</label><div><input autocomplete="off" id="product-search" placeholder="상품명, 컬러 검색" type="search"/><button aria-label="검색 닫기" id="search-close" type="button">닫기</button></div></div>
+<div class="active-filters" hidden="" id="active-filters"></div>
+<p aria-atomic="true" aria-live="polite" class="sr-only" id="filter-status"></p>
+<div class="product-grid" id="product-grid"></div>
+<div class="collection-bottom"><span class="mono" id="showing-count">SHOWING 09 OF 09</span><button id="back-to-top" type="button">Back to top</button></div>
+</section>
+<section aria-label="모션레이어 브랜드 영상" class="saga-film-section" id="brand-film"><video id="saga-film" loop="" muted="" playsinline="" poster="assets/lookbook-poster.webp" preload="none"><source src="assets/lookbook.mp4" type="video/mp4"/></video><button aria-label="브랜드 영상 처음부터 재생" class="saga-film-play" id="saga-film-play" type="button"><span>Play</span></button><button class="saga-preview-toggle" id="saga-preview-toggle" type="button">Pause preview</button></section><section aria-labelledby="series-title" class="series-section page-width" id="series"><div class="section-caption"><span class="eyebrow mono">FIND YOUR OWN RHYTHM</span><h2 id="series-title">Different days.<br/>Different layers.</h2><p>일상의 리듬을 따라 고르는 세 가지 시리즈.</p></div><div class="series-grid"><button class="series-item" data-series="daily" type="button"><div class="series-visual"><img alt="데일리 시리즈의 편안한 티셔츠" height="600" loading="lazy" src="assets/everyday-tee.webp" width="600"/></div><div class="series-meta"><span>Daily</span><span class="mono">매일, 자연스럽게</span></div></button><button class="series-item" data-series="active" type="button"><div class="series-visual"><img alt="액티브 시리즈의 가벼운 쇼츠" height="600" loading="lazy" src="assets/light-shorts.webp" width="600"/></div><div class="series-meta"><span>Active</span><span class="mono">움직임의 순간</span></div></button><button class="series-item" data-series="pause" type="button"><div class="series-visual"><img alt="포즈 시리즈의 부드러운 후디" height="600" loading="lazy" src="assets/soft-hoodie.webp" width="600"/></div><div class="series-meta"><span>Pause</span><span class="mono">잠시, 나의 속도로</span></div></button></div></section>
+<section aria-labelledby="brand-note-title" class="brand-note page-width"><img alt="" height="80" loading="lazy" src="assets/mark.svg" width="80"/><div><span class="eyebrow mono">ONE POINT. ENDLESS MOTION.</span><h2 id="brand-note-title">하나의 점에서 시작되는<br/>무수한 움직임.</h2><button class="underlined-link" data-open-info="about" type="button">모션레이어의 이야기</button></div></section>
+</main>
+<footer class="site-footer page-width"><div class="footer-top"><p>Stay in motion.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">소식 받을 이메일</label><input autocomplete="email" id="newsletter-email" placeholder="Email address" required="" type="email"/><button type="submit">Subscribe</button></form></div><div class="footer-links"><div><a href="#collection">Shop</a><a href="#series">Series</a><button data-open-info="about" type="button">About</button><a href="#brand-film">Film</a></div><div><button data-open-info="guide" type="button">Shipping &amp; Returns</button><button data-open-info="faq" type="button">FAQ</button><button data-open-info="terms" type="button">Terms &amp; Privacy</button></div><div><button data-open-info="social" type="button">Instagram</button><span>Everyday, everywhere.</span></div></div><div aria-label="MOTION LAYER" class="footer-wordmark">MOTION LAYER</div><div class="footer-bottom mono"><span>© 2026 MOTION LAYER</span><span>DESIGN PREVIEW · 시안용 컬렉션</span><span>YOUR EVERYDAY, IN MOTION.</span></div></footer>
+<dialog aria-labelledby="product-dialog-title" class="product-dialog" id="product-dialog"><button aria-label="상품 상세 닫기" class="dialog-close" data-close="product-dialog" type="button">Close <span aria-hidden="true">×</span></button><div id="product-detail"></div></dialog>
+<dialog aria-labelledby="cart-title" class="cart-dialog" id="cart-dialog"><div class="drawer-header"><h2 id="cart-title">Your bag <span class="cart-count">(0)</span></h2><button aria-label="장바구니 닫기" data-close="cart-dialog" type="button">Close <span aria-hidden="true">×</span></button></div><div class="cart-content" id="cart-content"></div><div id="cart-summary"></div></dialog>
+<dialog aria-labelledby="info-title" class="info-dialog" id="info-dialog"><button aria-label="안내 닫기" class="dialog-close" data-close="info-dialog" type="button">Close <span aria-hidden="true">×</span></button><div id="info-content"></div></dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+</body>
+</html>
+

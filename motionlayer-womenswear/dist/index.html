@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdfcfb">
+  <meta name="description" content="MOTION LAYER. 부드럽게 흐르는 실루엣, 나만의 속도로 채우는 일상. 모션레이어 여성복 디자인 시안.">
+  <title>MOTION LAYER — The soft edit</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">컬렉션으로 건너뛰기</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="모션레이어 홈"><img src="assets/mark.svg" width="24" height="24" alt=""><span>motion layer</span></a>
+    <nav class="main-nav" aria-label="메인 메뉴"><a href="#collection">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a></nav>
+    <div class="header-right"><button id="mood-link" type="button">오늘의 기분</button><button class="bag-link" id="bag-link" type="button">Bag (0)</button><button class="mobile-menu-button" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button></div>
+  </header>
+  <nav class="mobile-menu wrap" id="mobile-menu" hidden aria-label="모바일 메뉴"><a href="#collection">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a><a href="#mood-section">오늘의 기분</a></nav>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">WOMENSWEAR — THE SOFT EDIT</p><h1 id="hero-title">Softness,<br>in <em>motion.</em></h1><div class="hero-description"><p>가볍게 흐르는 실루엣.<br>나의 속도로 채워가는 하루.</p><p class="secondary">익숙한 일상에 부드러운 변화를 더하는 옷.<br>모션레이어의 새로운 레이어를 만나보세요.</p></div><a class="text-link" href="#collection">Explore the collection</a><div class="hero-footnote"><span>A LITTLE EASE, EVERY DAY.</span><span>모션레이어</span></div></div>
+      <figure class="hero-figure"><div class="hero-photo"><img src="assets/campaign.webp" width="1174" height="1783" alt="여유로운 파우더 블루 셋업을 입고 앉아 있는 여성" fetchpriority="high"></div><figcaption><span>Everyday, beautifully.</span><span>Collection / The soft edit</span></figcaption></figure>
+    </section>
+
+    <section class="collection wrap" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">FOR ALL YOUR ORDINARY MOMENTS</p><h2 id="collection-title">The <em>soft</em> edit<span id="product-count">06</span></h2></div><div class="view-switch" role="group" aria-label="상품 보기 방식"><button type="button" id="grid-view" aria-pressed="true">Gallery</button><span>/</span><button type="button" id="index-view" aria-pressed="false">Index</button></div></div>
+      <div class="collection-tools"><nav class="categories" id="categories" aria-label="상품 분류"><button type="button" data-category="all" aria-pressed="true">All pieces</button><button type="button" data-category="dresses" aria-pressed="false">Dresses</button><button type="button" data-category="tops" aria-pressed="false">Tops</button><button type="button" data-category="layers" aria-pressed="false">Layers</button></nav><label class="color-select"><select id="color-select" aria-label="컬러 필터"><option value="">All colors</option value="blue">Blue</option><option value="green">Green</option><option value="navy">Navy</option><option value="brown">Brown</option></select><span aria-hidden="true"></span></label></div>
+      <p id="filter-status" class="sr-only" aria-live="polite"></p><div id="active-mood" class="active-mood" hidden></div><div class="product-grid" id="product-grid"></div>
+      <div class="collection-end"><span id="showing-count">SIX PIECES, ENDLESS POSSIBILITIES.</span><button type="button" id="reset-filters">모든 상품 보기</button></div>
+    </section>
+
+    <section class="mood-section wrap" id="mood-section" aria-labelledby="mood-title"><div class="mood-heading"><p class="eyebrow">A LAYER FOR EVERY FEELING</p><h2 id="mood-title">오늘, 어떤 <em>기분</em>인가요?</h2></div><div class="mood-options"><button type="button" data-mood="light"><span class="mood-symbol" aria-hidden="true">◌</span><span>가볍게</span><small>Light & easy</small></button><button type="button" data-mood="calm"><span class="mood-symbol" aria-hidden="true">∽</span><span>차분하게</span><small>Slow & soft</small></button><button type="button" data-mood="free"><span class="mood-symbol" aria-hidden="true">✳</span><span>자유롭게</span><small>Your own way</small></button></div></section>
+
+    <section class="journal wrap" id="journal" aria-labelledby="journal-title"><figure><img src="assets/editorial.webp" width="1200" height="1600" loading="lazy" alt="자연스러운 공간과 차분한 여성복 스타일링을 담은 화보"><figcaption>THE EVERYDAY JOURNAL / A QUIETER PACE</figcaption></figure><div class="journal-copy"><p class="eyebrow">A MOMENT TO YOURSELF</p><h2 id="journal-title">Nothing to rush.<br>Just <em>be.</em></h2><p>조금 느리게 걷고, 좋아하는 길로 돌아가는 날.<br>흐르는 옷자락처럼, 하루도 자연스럽게.</p><a class="text-link" href="#collection">Discover your everyday layer</a></div></section>
+
+    <section class="brand-story wrap" id="story" aria-labelledby="story-title"><img src="assets/mark.svg" width="41" height="41" alt="모션레이어 점 로고"><div><p class="eyebrow">OUR POINT OF VIEW</p><h2 id="story-title">Small moments.<br><em>Beautiful layers.</em></h2><p>하나의 점에서 시작해 서로 다른 순간으로 이어지는 움직임.<br>모션레이어는 각자의 일상에 자연스럽게 스며드는 옷을 생각합니다.<br>당신다운 하루에, 가장 편안한 레이어가 되기를.</p></div></section>
+  </main>
+  <footer class="site-footer wrap"><div class="footer-top"><div><p class="eyebrow">LET'S STAY CLOSE</p><h2>A little note,<br>now and <em>then.</em></h2></div><div class="newsletter"><label for="email">새로운 컬렉션과 모션레이어의 이야기를 만나보세요.</label><form id="newsletter-form"><input type="email" id="email" placeholder="Your email address" autocomplete="email" required><button type="submit">Subscribe</button></form></div></div><div class="footer-links"><div><a href="#collection">Shop</a><a href="#story">Our story</a><a href="#journal">Journal</a></div><div><button type="button" data-info="guide">Shipping & Returns</button><button type="button" data-info="faq">FAQ</button><button type="button" data-info="privacy">Terms & Privacy</button></div><div><button type="button" data-info="instagram">Instagram</button><span>In your own rhythm.</span></div></div><div class="footer-wordmark" aria-label="motion layer">motion layer</div><div class="footer-bottom"><span>© 2026 MOTION LAYER</span><span>WOMENSWEAR / DESIGN PREVIEW</span><span>사진·상품 정보는 시안용입니다.</span></div></footer>
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-title"><button class="dialog-close" type="button" data-close="product-dialog" aria-label="상품 상세 닫기">Close <span>×</span></button><div id="product-detail"></div></dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><button class="dialog-close" type="button" data-close="info-dialog" aria-label="안내 닫기">Close <span>×</span></button><div id="info-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

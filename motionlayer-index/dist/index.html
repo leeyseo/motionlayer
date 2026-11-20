@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f8f3">
+  <meta name="description" content="모션레이어 의류 컬렉션. 번호와 오늘의 상태로 나에게 맞는 레이어를 찾아보세요.">
+  <title>MOTION LAYER — Garment Index</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/field-campaign.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      const entryUrl=new URL(location.href);
+      const replay=entryUrl.searchParams.get('intro')==='1';
+      if(replay){entryUrl.searchParams.delete('intro');history.replaceState(history.state,'',entryUrl)}
+      if (!entryUrl.hash && !entryUrl.search && (replay || !sessionStorage.getItem('ml-index-entered')) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('first-visit');
+      }
+      sessionStorage.setItem('ml-index-entered','1');
+    } catch {}
+  </script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="entry-cover" aria-hidden="true"><span class="entry-sign"><img src="assets/mark.svg" alt="" width="40" height="40">MOTION LAYER</span></div>
+  <a class="skip-link" href="#catalog">상품 목록으로 건너뛰기</a>
+  <header class="topbar">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="모션레이어 홈"><img src="assets/mark.svg" alt="" width="29" height="29"><span>MOTION LAYER</span></a>
+      <nav class="desk-nav" aria-label="주 메뉴"><a href="#catalog">Shop</a><a href="#series">Series</a><a href="#about">About</a></nav>
+      <div class="head-actions">
+        <button type="button" class="head-mood" data-picker="mood" aria-expanded="false"><i class="state-sign" aria-hidden="true"></i>오늘의 상태</button>
+        <a class="head-account" href="#info/account" aria-label="회원·주문">My page</a>
+        <a class="bag-link" href="#bag">Bag <span data-bag-count>(00)</span></a>
+        <button type="button" class="mobile-menu" id="menu-trigger" aria-expanded="false" aria-controls="menu-dialog">Menu</button>
+      </div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="cover page" aria-labelledby="cover-title">
+      <div class="cover-copy">
+        <p id="series-code" class="series-code mono"><i class="ink-dot" aria-hidden="true"></i> SERIES 01 / FIELD</p>
+        <h1 id="cover-title" aria-label="Field Studies.">Field<br><span class="word-gap">Studies</span><span class="period">.</span></h1>
+        <div class="cover-description">
+          <p id="cover-copy">바람 부는 날, 겹쳐 입고 가볍게 걸을 수 있는 옷.</p>
+          <a href="#catalog" id="cover-shop" data-series="field" class="text-link">필드 시리즈 보기</a>
+        </div>
+      </div>
+      <figure class="cover-photo">
+        <img id="cover-img" src="assets/field-campaign.webp" alt="바람 부는 능선에서 짙은 색 아노락을 입고 걷는 모델" width="1536" height="1024" fetchpriority="high">
+        <figcaption class="image-controls">
+          <span id="cover-count" class="mono" aria-live="polite">01 / 03</span>
+          <button type="button" data-cover-step="-1" aria-label="이전 시리즈">Prev</button>
+          <button type="button" data-cover-step="1" aria-label="다음 시리즈">Next</button>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="new-arrivals" class="arrivals page" aria-labelledby="arrivals-title">
+      <div class="arrivals-inner">
+        <h2 id="arrivals-title">신상품</h2>
+        <ul id="arrival-list" class="arrival-list"></ul>
+      </div>
+    </section>
+    <section class="catalog page" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-title-line">
+        <div class="index-title"><h2 id="catalog-title">Garment Index</h2><span id="count" class="index-count mono" aria-label="표시된 상품 수">09</span></div>
+        <button type="button" class="catalog-mood" data-picker="mood" aria-expanded="false"><i class="state-sign" aria-hidden="true"></i>오늘의 상태<span class="plus" aria-hidden="true">+</span></button>
+      </div>
+      <div class="toolbar">
+        <div id="type-tabs" class="tabs" role="group" aria-label="아이템 종류"></div>
+        <button type="button" id="filter-trigger" data-picker="filters" aria-expanded="false"><span class="filter-symbol" aria-hidden="true"></span>필터<span id="filter-count"></span></button>
+      </div>
+      <div id="desktop-picker" class="inline-picker" hidden></div>
+      <div id="chips" class="chips" hidden></div>
+      <p id="result-status" class="sr-only" role="status" aria-live="polite"></p>
+      <div id="catalog-content">
+        <div class="catalog-pair" id="catalog-pair">
+          <div class="atlas-pane">
+            <h3 class="col-caption mono" lang="en">Photo index</h3>
+            <div class="atlas" id="atlas"></div>
+          </div>
+          <div class="mobile-preview" id="mobile-preview">
+            <a id="preview-link" href="#item/layer-shell" aria-label="현재 상품 상세 보기"><span id="preview-images"></span></a>
+            <div class="preview-meta"><span class="mono" id="preview-no">01</span><div class="preview-sides" aria-label="미리보기 사진"><button type="button" data-side="0" aria-pressed="true">앞면</button><button type="button" data-side="1" aria-pressed="false">뒷면</button></div></div>
+          </div>
+          <div class="list-pane">
+            <div class="row-head mono" aria-hidden="true"><span>No.</span><span>Product</span><span>Colour</span><span>Price</span></div>
+            <div id="rows"></div>
+          </div>
+        </div>
+        <div class="empty" id="empty" hidden><p>조건에 맞는 상품이 없습니다.</p><button type="button" data-reset class="text-link">전체 상품 보기</button></div>
+      </div>
+    </section>
+
+    <section id="series" class="series-section page" aria-labelledby="series-title">
+      <div class="section-heading"><h2 id="series-title">Series</h2><span class="mono">01 — 03</span></div>
+      <div class="series-cards" id="series-cards"></div>
+    </section>
+    <section id="about" class="about page" aria-labelledby="about-title">
+      <div class="logo-story"><img src="assets/mark.svg" width="55" height="55" alt="모션레이어의 점 로고"><div><h3>점 로고 이야기</h3><p>로고의 작은 점들은 한 걸음씩 이어지는 움직임을 담았습니다.</p></div></div>
+      <div><h2 id="about-title">움직임을 겹쳐 입습니다.</h2><p>저마다 다른 속도로 걷고, 일하고, 쉬는 하루. 모션레이어는 그 사이에 입을 옷을 만듭니다.</p></div>
+    </section>
+    <section id="studio" class="studio page" aria-labelledby="studio-title">
+      <div class="studio-heading"><h2 id="studio-title">Studio feed</h2><span class="mono">Instagram 미리보기</span></div>
+      <div class="studio-strip">
+        <a href="#item/layer-shell"><img src="assets/shell-look.webp" width="600" height="480" loading="lazy" alt="바람 부는 들판의 라이트 레이어 셸"><span>Field shell</span></a>
+        <a href="#item/field-pants"><img src="assets/field-detail.webp" width="600" height="480" loading="lazy" alt="필드 팬츠의 옆 포켓 디테일"><span>Pocket detail</span></a>
+        <a href="#item/zip-layer"><img src="assets/zip-layer.webp" width="600" height="480" loading="lazy" alt="인디고 집 레이어의 원단과 형태"><span>Indigo layer</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner page"><div><a class="wordmark" href="#top"><img src="assets/mark.svg" width="22" height="22" alt="">MOTION LAYER</a><p>모션레이어 의류 컬렉션 시안</p></div>
+      <nav aria-label="고객 안내"><a href="#info/account">회원·주문</a><a href="#info/shipping">배송·교환·반품</a><a href="#info/faq">FAQ</a><a href="#info/terms">이용약관</a></nav>
+      <a class="mono to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog id="menu-dialog" aria-labelledby="menu-heading" class="menu-sheet"><div class="dialog-head"><h2 id="menu-heading">Menu</h2><button type="button" data-dismiss>닫기</button></div><nav aria-label="모바일 주 메뉴"><a href="#catalog">Shop</a><a href="#series">Series</a><a href="#about">About</a><button type="button" data-picker="mood"><i class="state-sign" aria-hidden="true"></i>오늘의 상태</button><a href="#info/account">회원·주문</a><a href="#bag">Bag <span data-bag-count>(00)</span></a></nav></dialog>
+  <dialog id="picker-dialog" aria-labelledby="picker-heading" class="filter-sheet"><div class="dialog-head"><h2 id="picker-heading">오늘의 상태</h2><button type="button" data-dismiss>닫기</button></div><div id="mobile-picker-content"></div></dialog>
+  <dialog id="shop-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span class="mono" id="dialog-context">MOTION LAYER</span><button type="button" data-dismiss aria-label="닫기">닫기 <span aria-hidden="true">×</span></button></div><div id="shop-body"></div></dialog>
+</body>
+</html>

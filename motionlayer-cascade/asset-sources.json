@@ -1,0 +1,137 @@
+[
+  {
+    "file": "assets/campaign.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/image_23.png?v=1706202594&width=1500",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/editorial.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/AW22_Campaign04_226886_LR_1.jpg?v=1663205813&width=1500",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/fluid-dress.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/SparkesDressBlue_BulAug2314352.jpg?v=1712820610&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/stripe-top.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/ViagemSingletGreenStripe_BulAug2314246.jpg?v=1712819202&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/drape-dress.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/VinhoDressNavy_BulAug2314276.jpg?v=1712820624&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/cotton-robe.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/SolRobeBrown_BulAug2314174.jpg?v=1712820603&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/flow-dress.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/VinhoDressGreen_BulAug2314306.jpg?v=1712819213&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/check-vest.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/UlsterVestCheck_bulfeb20240361.jpg?v=1712818053&width=1000",
+    "use": "temporary visual reference, not an actual MOTION LAYER product"
+  },
+  {
+    "file": "assets/check-campaign.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/AW24CampaignBelfast04A.jpg?v=1712817839&width=1400",
+    "use": "temporary visual reference; not a MOTION LAYER product"
+  },
+  {
+    "file": "assets/fluid-dress-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/SparkesDressBlue_BulAug2314353.jpg?v=1712820610&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/stripe-top-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/ViagemSingletGreenStripe_BulAug2314247.jpg?v=1712819202&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/drape-dress-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/VinhoDressNavy_BulAug2314279.jpg?v=1712820624&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/cotton-robe-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/SolRobeBrown_BulAug2314175.jpg?v=1712820603&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/flow-dress-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/VinhoDressGreen_BulAug2314307.jpg?v=1712819213&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/check-vest-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/AW24CampaignBelfast01B.jpg?v=1712818053&width=1000",
+    "use": "temporary visual reference for second-image hover and gallery"
+  },
+  {
+    "file": "assets/lookbook.mp4",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/videos/c/vp/2ac0bf077363473da79febcd6fcb7649/2ac0bf077363473da79febcd6fcb7649.HD-1080p-3.3Mbps-9262730.mp4?v=0",
+    "use": "temporary Cascade video behavior reference"
+  },
+  {
+    "file": "assets/lookbook-poster.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/preview_images/2ac0bf077363473da79febcd6fcb7649.thumbnail.0000000000_2048x.jpg?v=1663028669",
+    "use": "temporary Cascade video poster"
+  },
+  {
+    "file": "assets/check-coat.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/WaringCoatCheck_bulfeb20240471.jpg?v=1712818078&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/check-coat-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/WaringCoatCheck_bulfeb20240473.jpg?v=1712818078&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/navy-coat.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/WaringCoatNavy_bulfeb20240348.jpg?v=1712817333&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/navy-coat-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/WaringCoatNavy_bulfeb20240350.jpg?v=1712817333&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/red-wrap-top.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/ViagemSingletRed_BulAug2314166.jpg?v=1712819207&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/red-wrap-top-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/ViagemSingletRed_BulAug2314167.jpg?v=1712819207&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/blue-check-top.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/ViagemSingletBlueNavyCheck_BulAug2314340.jpg?v=1712819196&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/blue-check-top-back.webp",
+    "source": "https://cdn.shopify.com/s/files/1/0657/0138/0315/files/ViagemSingletBlueNavyCheck_BulAug2314341.jpg?v=1712819196&width=1000",
+    "use": "temporary Cascade Latest Arrivals composition reference"
+  },
+  {
+    "file": "assets/cascade-inter.woff2",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/fonts/inter/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2",
+    "use": "Inter typeface matching the observed Latest Arrivals heading"
+  },
+  {
+    "file": "assets/campaign-blue.webp",
+    "source": "https://cascade-preset-1.myshopify.com/cdn/shop/files/AnoCamiBlue_Bul-Aug-2314225.jpg?v=1712820341&width=1400",
+    "use": "temporary reference for fourth mobile campaign image"
+  }
+]

@@ -1,2 +1,7 @@
 .firebase/
 firebase-debug*.log
+node_modules/
+.qa/
+__pycache__/
+.env*
+*.tmp.*

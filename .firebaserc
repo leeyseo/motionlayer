@@ -7,7 +7,11 @@
       "hosting": {
         "state": ["fenno-state-ss27"],
         "index": ["fenno-index-ss27"],
-        "lookbook": ["fenno-lookbook-ss27"]
+        "lookbook": ["fenno-lookbook-ss27"],
+        "motionlayer-saga": ["motionlayer-saga-ss27"],
+        "motionlayer-womenswear": ["motionlayer-soft-edit-ss27"],
+        "motionlayer-cascade": ["motionlayer-cascade-ss27"],
+        "motionlayer-index": ["motionlayer-index-ss27"]
       }
     }
   }

@@ -1,0 +1,10 @@
+{
+  "name": "motionlayer-saga-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "check": "node --check dist/app.js"
+  }
+}
