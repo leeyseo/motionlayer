@@ -148,7 +148,7 @@ function menu() {
   return `<nav class="site-links" aria-label="스토어">
     <button data-reset class="nav-link" aria-pressed="${isAll}"><span>all goods</span><i></i></button>
     ${choice('recent','new','new arrivals',ui.recent)}
-    ${nav('series','series') + nav('about','about fenno') + nav('account','my page')}
+    ${nav('series','series') + nav('about','about motion layer') + nav('account','my page')}
     ${nav('bag',`bag (<span data-bag-count>${memory.bag.reduce((n,v)=>n+v.qty,0)}</span>)`)}
   </nav><fieldset><legend>오늘의 상태</legend>${Object.entries(moods).map(([id,[name]])=>choice('filterMood',id,name,ui.filterMood===id)).join('')}</fieldset>
   <fieldset><legend>item</legend>${types.slice(1).map(t=>choice('type',t,t,ui.type===t)).join('')}</fieldset>
@@ -211,7 +211,7 @@ function selectSeries(id) {
   $('#catalog').scrollIntoView();
 }
 function renderMobileMenu() {
-  $('#sheet-content').innerHTML=heading('FENNO / INDEX','메뉴 · 필터')+`<div class="mobile-menu">${menu()}</div><button class="primary wfull" data-show-results>상품 ${matchingGoods().length}개 보기</button>`;
+  $('#sheet-content').innerHTML=heading('MOTION LAYER / INDEX','메뉴 · 필터')+`<div class="mobile-menu">${menu()}</div><button class="primary wfull" data-show-results>상품 ${matchingGoods().length}개 보기</button>`;
 }
 function highlight(id) {
   for(const el of matrix.querySelectorAll('[data-id].marked')) el.classList.remove('marked');

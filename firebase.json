@@ -1,8 +1,32 @@
 {
   "hosting": [
-    { "target": "state", "public": "fenno-preview" },
-    { "target": "index", "public": "fenno-index" },
-    { "target": "lookbook", "public": "fenno-highlight" },
+    { "target": "state", "public": "motionlayer-state" },
+    { "target": "index", "public": "motionlayer-product-index" },
+    { "target": "lookbook", "public": "motionlayer-lookbook" },
+    {
+      "target": "legacy-state",
+      "public": "motionlayer-state",
+      "redirects": [
+        { "source": "/", "destination": "https://motionlayer-state-ss27.web.app/", "type": 301 },
+        { "source": "/:path*", "destination": "https://motionlayer-state-ss27.web.app/:path", "type": 301 }
+      ]
+    },
+    {
+      "target": "legacy-index",
+      "public": "motionlayer-product-index",
+      "redirects": [
+        { "source": "/", "destination": "https://motionlayer-product-index-ss27.web.app/", "type": 301 },
+        { "source": "/:path*", "destination": "https://motionlayer-product-index-ss27.web.app/:path", "type": 301 }
+      ]
+    },
+    {
+      "target": "legacy-lookbook",
+      "public": "motionlayer-lookbook",
+      "redirects": [
+        { "source": "/", "destination": "https://motionlayer-lookbook-ss27.web.app/", "type": 301 },
+        { "source": "/:path*", "destination": "https://motionlayer-lookbook-ss27.web.app/:path", "type": 301 }
+      ]
+    },
     { "target": "motionlayer-saga", "public": "motionlayer-saga/dist" },
     { "target": "motionlayer-womenswear", "public": "motionlayer-womenswear/dist" },
     { "target": "motionlayer-cascade", "public": "motionlayer-cascade/dist" },

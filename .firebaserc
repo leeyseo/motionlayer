@@ -5,9 +5,12 @@
   "targets": {
     "fenno-state-ss27": {
       "hosting": {
-        "state": ["fenno-state-ss27"],
-        "index": ["fenno-index-ss27"],
-        "lookbook": ["fenno-lookbook-ss27"],
+        "state": ["motionlayer-state-ss27"],
+        "index": ["motionlayer-product-index-ss27"],
+        "lookbook": ["motionlayer-lookbook-ss27"],
+        "legacy-state": ["fenno-state-ss27"],
+        "legacy-index": ["fenno-index-ss27"],
+        "legacy-lookbook": ["fenno-lookbook-ss27"],
         "motionlayer-saga": ["motionlayer-saga-ss27"],
         "motionlayer-womenswear": ["motionlayer-soft-edit-ss27"],
         "motionlayer-cascade": ["motionlayer-cascade-ss27"],

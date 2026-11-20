@@ -156,7 +156,7 @@ function content(route,id) {
     case 'checkout': return checkout();
     case 'order': return receipt(id);
     case 'account': return account();
-    case 'about': return heading('ABOUT FENNO','오늘을 찍는 점.')+'<div class="story-dot" aria-hidden="true"></div><p class="sheet-intro">fenno.는 그날의 몸과 기분에서 옷을 고르는 브랜드입니다. 걷고 싶은 날에는 가벼운 셸을, 오래 머무는 날에는 부드러운 면 한 겹을 제안합니다.</p><h3>이름 끝의 점</h3><p class="sheet-intro">작은 파란 점은 지금 내가 있는 자리입니다. 상태를 고르면 첫 화면의 점도 자리를 옮깁니다. 계절과 하루 사이에서 바뀌는 감각을 점 하나에 기록합니다.</p>';
+    case 'about': return heading('ABOUT MOTION LAYER','오늘을 찍는 점.')+'<div class="story-dot" aria-hidden="true"></div><p class="sheet-intro">모션레이어는 그날의 몸과 기분에서 옷을 고르는 브랜드입니다. 걷고 싶은 날에는 가벼운 셸을, 오래 머무는 날에는 부드러운 면 한 겹을 제안합니다.</p><h3>이름 끝의 점</h3><p class="sheet-intro">작은 파란 점은 지금 내가 있는 자리입니다. 상태를 고르면 첫 화면의 점도 자리를 옮깁니다. 계절과 하루 사이에서 바뀌는 감각을 점 하나에 기록합니다.</p>';
     case 'guide': return guide();
     case 'terms': return heading('SHOP POLICY / PREVIEW','이용약관')+'<p class="sheet-intro">현재는 스토어 시안입니다. 상품과 가격은 예시이며, 주문 내역은 사용 중인 브라우저에 저장됩니다. 실제 판매에 적용할 구매·결제, 취소·환불 및 회원 이용 조건은 정식 오픈 전에 게시합니다.</p><a href="#guide" class="secondary">고객 안내</a>';
     case 'post': {

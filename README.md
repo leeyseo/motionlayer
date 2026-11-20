@@ -4,15 +4,29 @@ Each concept is deployed to its own Firebase Hosting site in the existing `fenno
 
 | Concept | Source | Firebase target | Site |
 | --- | --- | --- | --- |
-| Fenno State | `fenno-preview/` | `state` | https://fenno-state-ss27.web.app |
-| Fenno Index | `fenno-index/` | `index` | https://fenno-index-ss27.web.app |
-| Fenno Lookbook | `fenno-highlight/` | `lookbook` | https://fenno-lookbook-ss27.web.app |
+| Motion Layer State | `motionlayer-state/` | `state` | https://motionlayer-state-ss27.web.app |
+| Motion Layer Product Index | `motionlayer-product-index/` | `index` | https://motionlayer-product-index-ss27.web.app |
+| Motion Layer Lookbook | `motionlayer-lookbook/` | `lookbook` | https://motionlayer-lookbook-ss27.web.app |
 | Saga | `motionlayer-saga/dist/` | `motionlayer-saga` | https://motionlayer-saga-ss27.web.app |
 | Womenswear — The Soft Edit | `motionlayer-womenswear/dist/` | `motionlayer-womenswear` | https://motionlayer-soft-edit-ss27.web.app |
 | Cascade | `motionlayer-cascade/dist/` | `motionlayer-cascade` | https://motionlayer-cascade-ss27.web.app |
 | Garment Index | `motionlayer-index/dist/` | `motionlayer-index` | https://motionlayer-index-ss27.web.app |
 
-The four Motion Layer previews are buildless HTML, CSS, and JavaScript sites. Their `dist/` folders include the images and fonts needed for hosting. Supporting tools and asset source notes are kept alongside each preview.
+All seven Motion Layer previews are buildless HTML, CSS, and JavaScript sites. Saga, Soft Edit, Cascade, and Garment Index keep their deployable files in `dist/`; State, Product Index, and Lookbook use their concept folder directly. The deployed folders include local images and fonts.
+
+The former `fenno-*.web.app` and `fenno-*.firebaseapp.com` addresses redirect to the corresponding Motion Layer sites, preserving URL paths. The existing Firebase project ID remains `fenno-state-ss27`.
+
+## Deploy State, Product Index, and Lookbook
+
+```sh
+npx firebase-tools deploy --project fenno-state-ss27 --only hosting:state,hosting:index,hosting:lookbook
+```
+
+To update redirects from the former addresses:
+
+```sh
+npx firebase-tools deploy --project fenno-state-ss27 --only hosting:legacy-state,hosting:legacy-index,hosting:legacy-lookbook
+```
 
 ## Deploy the four Motion Layer previews
 

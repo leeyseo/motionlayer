@@ -65,11 +65,11 @@ function searchResults() {
   $('#search-results').innerHTML=(query?items:items.slice(0,4)).map(p=>`<a href="#product/${p.id}" class="search-result"><img src="${photo(p)}" alt=""><span>${pad(p.id)}. ${p.name}</span><span class="price">${won(p.price)}</span></a>`).join('') || '<p>다른 상품명이나 컬러로 검색해 보세요.</p>';
 }
 function menuPage() {
-  return heading('FENNO / SS27','Menu') + '<nav class="menu-links"><a href="#catalog">Shop · 상품</a><a href="#series">Series · 룩북</a><a href="#about">About · 브랜드 소개</a><a href="#journal">Studio notes</a><a href="#account">My page</a><a href="#guide">고객 안내</a></nav>';
+  return heading('MOTION LAYER / SS27','Menu') + '<nav class="menu-links"><a href="#catalog">Shop · 상품</a><a href="#series">Series · 룩북</a><a href="#about">About · 브랜드 소개</a><a href="#journal">Studio notes</a><a href="#account">My page</a><a href="#guide">고객 안내</a></nav>';
 }
 function drawerContent(page,id) {
   if(page==='menu')return menuPage();
-  if(page==='search')return heading('FENNO / SHOP','Search')+'<label class="search-field"><span class="info-label">상품명 · 아이템 · 컬러</span><input id="search-box" type="search" autocomplete="off" placeholder="예: Shell, 차콜"></label><p id="search-status" class="fine" role="status"></p><div id="search-results"></div>';
+  if(page==='search')return heading('MOTION LAYER / SHOP','Search')+'<label class="search-field"><span class="info-label">상품명 · 아이템 · 컬러</span><input id="search-box" type="search" autocomplete="off" placeholder="예: Shell, 차콜"></label><p id="search-status" class="fine" role="status"></p><div id="search-results"></div>';
   return content(page,id);
 }
 function renderRoute() {
