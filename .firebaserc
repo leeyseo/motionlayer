@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fenno-state-ss27"
+  },
+  "targets": {
+    "fenno-state-ss27": {
+      "hosting": {
+        "state": ["fenno-state-ss27"],
+        "index": ["fenno-index-ss27"],
+        "lookbook": ["fenno-lookbook-ss27"]
+      }
+    }
+  }
+}

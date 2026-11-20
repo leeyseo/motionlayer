@@ -1,0 +1,7 @@
+{
+  "hosting": [
+    { "target": "state", "public": "fenno-preview" },
+    { "target": "index", "public": "fenno-index" },
+    { "target": "lookbook", "public": "fenno-highlight" }
+  ]
+}
