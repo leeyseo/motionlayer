@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>fenno. — Product Index / SS27</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="products.js"></script>
+  <script defer src="shop.js"></script>
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">상품 인덱스 바로가기</a>
+  <div class="reading-strip" inert>
+    <span class="reading-section">상품 목록</span>
+    <span class="reading-item" hidden><img alt=""><span></span></span>
+    <span class="reading-percent" aria-label="페이지 진행률">0%</span>
+    <a href="#home">맨 위 ↑</a>
+    <i class="reading-fill" aria-hidden="true"></i>
+  </div>
+  <div class="layout">
+    <main>
+      <header class="mast" id="home">
+        <a href="#home" class="word" aria-label="fenno 홈">fenno<span>.</span></a>
+        <span class="season">spring / summer 2027</span>
+        <div class="mobile-tools"><a href="#menu">메뉴·필터 <span>[+]</span></a><a href="#bag">bag (<span data-bag-count>0</span>)</a></div>
+      </header>
+      <section id="catalog" tabindex="-1">
+        <div class="index-head"><h1>Product index</h1><span id="result-count" role="status"></span><div id="active-filters"></div></div>
+        <div class="matrix">
+          <div class="photos" aria-label="번호별 상품 사진"></div>
+          <div class="entries" aria-label="상품 목록과 구매 옵션"></div>
+        </div>
+        <div class="zero" hidden><p>선택한 조건에 맞는 상품이 없습니다.</p><button data-reset>[ 필터 초기화 ]</button></div>
+      </section>
+      <section class="fieldnotes" aria-labelledby="field-title">
+        <h2 id="field-title">Series</h2>
+        <div class="series-strip">
+          <a href="#series/coast"><div class="series-frame"><img src="assets/coast.webp" alt="바다를 바라보는 후디 차림의 모델" loading="lazy"></div><span>01. Coastline <i>SS27</i></span></a>
+          <a href="#series/grove"><div class="series-frame"><img src="assets/forest.webp" alt="그늘진 숲길에서 입은 후드" loading="lazy"></div><span>02. Grove <i>SS27</i></span></a>
+        </div>
+      </section>
+      <section class="journal"><h2>Instagram <small>피드 미리보기</small></h2><div id="posts"></div></section>
+      <footer><a href="#about">fenno.</a><a href="#guide">배송 · 교환 · FAQ</a><a href="#terms">이용약관</a></footer>
+    </main>
+    <aside class="rail" aria-label="메뉴 및 필터">
+      <a class="brand-stamp" href="#about" aria-label="fenno 점 로고 이야기"><span>fenno</span><i aria-hidden="true"></i></a>
+      <div id="desktop-menu"></div>
+    </aside>
+  </div>
+  <dialog id="sheet" aria-labelledby="sheet-title">
+    <div class="sheet-bar"><a href="#home" class="sheet-logo">fenno.</a><button id="close">닫기 [×]</button></div>
+    <div id="sheet-content"></div>
+  </dialog>
+  <div class="feedback" role="status" aria-live="polite"></div>
+</body>
+</html>

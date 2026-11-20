@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>fenno. — Light layers / SS27</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8' fill='%23392bc1'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js" defer></script><script src="shop.js" defer></script><script src="store.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalog">상품 바로가기</a>
+  <header id="home" class="mast">
+    <nav class="head-nav" aria-label="상품 탐색">
+      <a href="#menu" aria-label="메뉴 열기"><i class="menu-icon" aria-hidden="true"></i><span>Menu</span></a>
+      <a href="#search" aria-label="상품 검색"><i class="search-icon" aria-hidden="true"></i><span>Search</span></a>
+    </nav>
+    <a class="wordmark" href="#home" aria-label="fenno 홈">fenno<b>.</b></a>
+    <nav class="user-nav" aria-label="회원과 장바구니"><a href="#account">My page</a><a href="#bag">Bag (<span data-bag-count>0</span>)</a></nav>
+  </header>
+  <main>
+    <section class="stories" aria-label="SS27 시리즈 룩북">
+      <article class="chapter" id="coastline">
+        <div class="chapter-copy">
+          <p class="eyebrow">01 / Coastline — SS27</p>
+          <h1>Light layers<b>.</b></h1>
+          <p class="chapter-note">바람이 바뀌면, 가볍게 한 겹.</p>
+          <a class="text-link" href="#catalog" data-series="coast">코스트라인 상품 보기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="main-shot"><div class="photo-mask"><img src="assets/campaign.webp" alt="차콜색 셸 재킷과 밝은 팬츠를 입은 모델의 코스트라인 룩북" fetchpriority="high"></div><figcaption>Coastline / Spring–Summer 2027</figcaption></figure>
+        <a class="inset" href="#product/1"><span class="inset-image"><img src="assets/garment-18.webp" alt="드리프트 윈드 셸 단독 사진"></span><span class="inset-caption">Nº 01 / Drift Wind Shell <i aria-hidden="true">↗</i></span></a>
+      </article>
+      <article class="chapter alternate" id="grove">
+        <div class="chapter-copy">
+          <p class="eyebrow">02 / Grove — SS27</p>
+          <h2>Off the path<b>.</b></h2>
+          <p class="chapter-note">숲길에서 도시까지, 느슨한 실루엣.</p>
+          <a class="text-link" href="#catalog" data-series="grove">그로브 상품 보기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="main-shot"><div class="photo-mask"><img src="assets/forest.webp" alt="짙은 녹음 앞에서 후드를 쓴 모델의 옆모습" loading="lazy"></div><figcaption>Grove / Spring–Summer 2027</figcaption></figure>
+        <a class="inset" href="#product/6"><span class="inset-image"><img src="assets/garment-3.webp" alt="올리브 드로스트링 쇼츠"></span><span class="inset-caption">Nº 06 / Track Draw Shorts <i aria-hidden="true">↗</i></span></a>
+      </article>
+    </section>
+    <section class="catalog block" id="catalog" aria-labelledby="catalog-heading">
+      <header class="block-head"><div><p class="eyebrow">Shop / SS27</p><h2 id="catalog-heading">Garment edit<b>.</b></h2></div><span id="count" role="status"></span></header>
+      <div class="state-box"><h3>오늘의 상태</h3><div class="states" role="group" aria-label="오늘의 상태">
+        <button data-state="" aria-pressed="true">모든 날</button><button data-state="rest" aria-pressed="false">느긋한 날</button><button data-state="move" aria-pressed="false">움직이는 날</button><button data-state="focus" aria-pressed="false">집중하는 날</button>
+      </div></div>
+      <div class="tools"><div class="scope"><button data-scope="all" aria-pressed="true">전체</button><button data-scope="new" aria-pressed="false">신상품</button></div><div class="selects">
+        <select id="type" aria-label="아이템 필터"></select><select id="color" aria-label="컬러 필터"></select><select id="sort" aria-label="정렬"><option value="index">번호순</option><option value="price">낮은 가격순</option><option value="name">이름순</option></select>
+      </div></div>
+      <div id="series-filter"></div><div class="grid" id="cards"></div><div id="empty" hidden><p>선택한 조건에 맞는 상품이 없습니다.</p><button class="text-link" data-clear>전체 상품 보기</button></div><button class="more" id="more" hidden></button>
+    </section>
+    <section class="journal block" id="journal" aria-labelledby="journal-heading">
+      <header class="block-head"><div><p class="eyebrow">Instagram / 피드 미리보기</p><h2 id="journal-heading">Studio notes<b>.</b></h2></div></header><div id="posts"></div>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#home">fenno<b>.</b></a><nav aria-label="고객 안내"><a href="#about">브랜드 소개</a><a href="#guide">배송 · 교환 · FAQ</a><a href="#terms">이용약관</a></nav></footer>
+  <a href="#home" class="to-top" aria-label="맨 위로" inert>↑</a>
+  <dialog id="drawer" aria-labelledby="sheet-title"><div class="drawer-bar"><a class="wordmark" href="#home">fenno<b>.</b></a><button id="close" aria-label="닫기">닫기 ×</button></div><div id="sheet-content"></div></dialog>
+</body>
+</html>
